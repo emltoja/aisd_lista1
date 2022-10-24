@@ -4,7 +4,6 @@
 from random import randint 
 from time import time
 from scipy.optimize import curve_fit
-from tqdm import tqdm
 from zad2 import time_algorithm
 import matplotlib.pyplot as plt
 import numpy as np
