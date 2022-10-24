@@ -8,7 +8,7 @@ from zad2 import time_algorithm
 import matplotlib.pyplot as plt
 import numpy as np
 
-test_cases = [[randint(0, 100) for i in range(i)] for i in tqdm(range(100, 1000, 100))]
+test_cases = [[randint(0, 100) for i in range(i)] for i in (range(100, 1000, 100))]
 
 def nlogn(x, a, b):
     return a*x*np.log(b*x)
@@ -19,7 +19,7 @@ def timeit(sample: list, reps: int):
         _ = sorted(sample)
     return len(sample), time() - start
 
-results = [time_algorithm(case, 1000) for case in tqdm(test_cases)]
+results = [time_algorithm(sorted, case, 1000) for case in (test_cases)]
 
 x, y = zip(*results)
 
